@@ -1,0 +1,435 @@
+﻿
+
+
+
+.list-style-text {
+    list-style: none;
+}
+
+    .list-style-text li {
+        font-size: 18px;
+        color: #444444;
+        font-weight: 400;
+        line-height: 45px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+.hr-line {
+    background: #d7d7d7;
+    height: 2px;
+    width: 100%;
+}
+
+.term-text {
+    font-size: 22px;
+    color: #167ae1;
+    font-weight: 500;
+    margin-bottom: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hr-bg-color {
+    position: absolute;
+    background: #167ae1;
+    height: 8px;
+    width: 15%;
+    left: 114px;
+    bottom: -19px;
+    border-radius: 4px;
+}
+
+.border-line {
+    padding: 43px;
+    border: 2px solid #d7d7d7;
+}
+
+.main-heading-color {
+    color: #1b7ce1;
+}
+
+.on-sroll {
+    height: 98vh;
+    width: 19%;
+    position: fixed;
+    transition: all .5s ease;
+    margin-top: -164px;
+}
+
+.side-bar-border {
+    padding: 25px 30px;
+    border: 2px solid #d7d7d7;
+    text-align: left;
+}
+
+.side-bar-active {
+    font-size: 22px;
+    color: #167ae1 !important;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.side-bar-text {
+    font-size: 22px;
+    color: #686c70;
+    font-weight: 500;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+    .side-bar-text:hover {
+        color: #686c70;
+        text-decoration: none;
+    }
+
+.ml-40 {
+    margin-left: 40px;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.mt-22 {
+    margin-top: 22px;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.mt-60 {
+    margin-top: 60px;
+}
+
+.mt-70 {
+    margin-top: 70px;
+}
+
+.mt-80 {
+    margin-top: 80px;
+}
+
+#introduction {
+    /* Set "section" to 0 */
+    counter-reset: section;
+}
+
+h2 {
+    position: relative;
+    counter-reset: subsection;
+}
+
+    h2::before {
+        left: -50px;
+        font-weight: 500;
+        font-family: 'Roboto', sans-serif;
+        position: absolute;
+        counter-increment: section;
+        content: counter(section) ".";
+    }
+
+
+ul {
+    counter-reset: subsection;
+    position: relative;
+}
+
+    ul li::before {
+        left: -16px;
+        font-weight: 500;
+        font-family: 'Roboto', sans-serif;
+        position: absolute;
+        counter-increment: section;
+        content: counter(section) ":";
+    }
+
+    ul li::before {
+        position: absolute;
+        counter-increment: subsection;
+        content: counter(section) "." counter(subsection) " ";
+    }
+
+ol {
+    counter-reset: subsection;
+    position: relative;
+}
+
+#introduction #copy ul li ol li::before {
+    left: -16px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    counter-increment: section;
+    content: counter(section) ":";
+}
+
+#introduction #copy ul li ol li::before {
+    position: absolute;
+    counter-increment: subsection;
+    content: counter(section) "." counter(section) "." counter(subsection) " ";
+}
+
+
+
+#license-me ol {
+    counter-reset: subsection;
+    position: relative;
+}
+
+#introduction #license-me ul li ol li::before {
+    left: -16px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    counter-increment: section;
+    content: counter(section) ":";
+}
+
+#introduction #license-me ul li ol li::before {
+    position: absolute;
+    counter-increment: subsection;
+    content: counter(section) "." counter(section) "." counter(subsection) " ";
+}
+
+/*#introduction #license ul li ol li::before {
+        position: absolute;
+        counter-increment: subsection;
+        content: counter(section) "." counter(subsection) " ";
+    }*/
+
+
+
+
+
+/*================ Media Query ===============*/
+@media screen and (max-width: 1500px) {
+    .on-sroll {
+        width: 18%;
+    }
+}
+
+@media screen and (max-width: 1367px) {
+
+
+    .on-sroll {
+        width: 19%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .on-sroll {
+        width: 21%;
+    }
+
+    .side-bar-text {
+        font-size: 18px;
+    }
+
+    .hr-bg-color {
+        width: 20%;
+        left: 40px;
+    }
+
+    .list-style-text li {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+}
+
+@media screen and (max-width: 800px) {
+    .on-sroll {
+        width: 19%;
+    }
+
+    h1 {
+        font-size: 38px !important;
+    }
+
+    h2 {
+        font-size: 28px !important;
+    }
+
+    .mt-70 {
+        margin-top: 30px;
+    }
+
+    .side-bar-text {
+        font-size: 16px;
+    }
+
+    .list-style-text li {
+        line-height: 30px;
+        font-size: 16px;
+    }
+
+    .side-bar-border {
+        padding: 20px 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 38px !important;
+    }
+
+    h2 {
+        font-size: 28px !important;
+    }
+
+    .mt-70 {
+        margin-top: 30px;
+    }
+
+    .side-bar-text {
+        font-size: 16px;
+    }
+
+    .list-style-text li {
+        line-height: 30px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .hr-bg-color {
+        width: 44%;
+        left: 21px;
+    }
+
+    .media-mt {
+        margin-top: 30px;
+    }
+
+    .on-sroll {
+        position: inherit;
+        width: 100%;
+        height: auto;
+    }
+
+    .border-line {
+        padding: 20px;
+    }
+
+    .media-padding {
+        padding: 0 15px;
+    }
+
+    h1 {
+        font-size: 24px !important;
+    }
+
+    h2 {
+        font-size: 20px !important;
+    }
+
+        h2::before {
+            left: -32px;
+        }
+
+    ul li::before {
+        left: 3px;
+    }
+
+    .list-style-text li {
+        font-size: 15px;
+        line-height: 34px;
+    }
+
+    .mt-70 {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 411px) {
+}
+
+@media screen and (max-width: 375px) {
+    .hr-bg-color {
+        width: 50%;
+        left: 19px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .hr-bg-color {
+        width: 53%;
+        left: 18px;
+    }
+}
+
+
+/*==================== Media Query For Land Scape Mode =====================*/
+@media screen and (max-width:1370px ) and (orientation: landscape) {
+}
+
+@media screen and (max-width: 1280px) and (orientation: landscape) {
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+}
+
+@media screen and (max-width: 823px) and (orientation: landscape) {
+    .side-bar-text {
+        font-size: 16px;
+    }
+
+    .side-bar-border {
+        padding: 10px 12px;
+    }
+
+    h2 {
+        font-size: 26px !important;
+    }
+
+    .list-style-text li {
+        font-size: 16px;
+        line-height: 35px;
+    }
+
+    .hr-bg-color {
+        width: 25%;
+        left: 57px;
+    }
+}
+
+@media screen and (max-width: 812px) and (orientation: landscape) {
+}
+
+@media screen and (max-width: 740px) and (orientation: landscape) {
+    .on-sroll {
+        position: inherit;
+        width: 100%;
+        height: auto;
+    }
+
+    .media-mt {
+        margin-top: 30px;
+    }
+
+    .hr-bg-color {
+        width: 26%;
+        left: 114px;
+    }
+}
+
+@media screen and (max-width: 736px) and (orientation: landscape) {
+}
+
+@media screen and (max-width: 731px) and (orientation: landscape) {
+}
+
+@media screen and (max-width: 667px) and (orientation: landscape) {
+    .hr-bg-color {
+        width: 30%;
+        left: 75px;
+    }
+}
+
+@media screen and (max-width: 640px) and (orientation: landscape) {
+    .hr-bg-color {
+        width: 32%;
+        left: 61px;
+    }
+}
